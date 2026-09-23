@@ -37,7 +37,10 @@ Bộ Unit Test được cung cấp trong thư mục `tests/` đóng vai trò nh�
 <img width="1414" height="931" alt="image" src="https://github.com/user-attachments/assets/ccf7b393-2c64-499a-906e-397874f56ce1" />
 <img width="1390" height="697" alt="image" src="https://github.com/user-attachments/assets/c36071be-a5ef-4dff-8d22-c87d74459b79" />
 
+# 🛡️ GitHook Lab 02
+Git hook thực chất chỉ là những file kịch bản (script) bình thường nằm ẩn trong thư mục .git/hooks/ trên máy của người tạo. Vì người tạo hiện tại có toàn quyền quản trị đối với máy tính của mình, nên người tạo có thể tự do mở file đó ra sửa nội dung, xóa nó đi, hoặc tước quyền thực thi của nó. Giống như việc ổ khóa nằm bên trong nhà và chủ nhà đang là người cầm chìa khóa vậy.
 
+<img width="1468" height="934" alt="image" src="https://github.com/user-attachments/assets/3893f497-3f8a-4586-84ad-cc6574eda4a0" />
 
 
 
