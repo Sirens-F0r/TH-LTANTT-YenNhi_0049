@@ -34,8 +34,8 @@
 ## 🚀 Hướng dẫn Kiểm thử (Proof of Concept)
 
 Bộ Unit Test được cung cấp trong thư mục `tests/` đóng vai trò như một máy quét lỗ hổng. Chạy lệnh sau trong Terminal để xác nhận các payload mã độc đã bypass thành công hệ thống phòng ngự (hệ thống sẽ báo `F` - Fail cho từng lỗ hổng bị xuyên thủng).
-<img width="1414" height="931" alt="image" src="https://github.com/user-attachments/assets/ccf7b393-2c64-499a-906e-397874f56ce1" />
-<img width="1390" height="697" alt="image" src="https://github.com/user-attachments/assets/c36071be-a5ef-4dff-8d22-c87d74459b79" />
+<img width="707" height="466" alt="Screenshot 2026-09-23 154701" src="https://github.com/user-attachments/assets/fa219f08-c777-4657-8241-68cbad2e348e" />
+<img width="695" height="349" alt="Screenshot 2026-09-23 154716" src="https://github.com/user-attachments/assets/850370d7-1fa5-46e0-80fc-1f6757afada0" />
 
 ```bash
 python -m unittest discover tests
@@ -43,4 +43,5 @@ python -m unittest discover tests
 # 🛡️ GitHook Lab 02
 Git hook thực chất chỉ là những file kịch bản (script) bình thường nằm ẩn trong thư mục .git/hooks/ trên máy của người tạo. Vì người tạo hiện tại có toàn quyền quản trị đối với máy tính của mình, nên người tạo có thể tự do mở file đó ra sửa nội dung, xóa nó đi, hoặc tước quyền thực thi của nó. Giống như việc ổ khóa nằm bên trong nhà và chủ nhà đang là người cầm chìa khóa vậy.
 
-<img width="1468" height="934" alt="image" src="https://github.com/user-attachments/assets/3893f497-3f8a-4586-84ad-cc6574eda4a0" />
+<img width="734" height="467" alt="Screenshot 2026-09-23 161900" src="https://github.com/user-attachments/assets/b154a75c-046c-4fbc-a5da-8bbe51713da1" />
+
