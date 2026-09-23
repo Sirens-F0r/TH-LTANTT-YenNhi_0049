@@ -34,6 +34,10 @@
 ## 🚀 Hướng dẫn Kiểm thử (Proof of Concept)
 
 Bộ Unit Test được cung cấp trong thư mục `tests/` đóng vai trò như một máy quét lỗ hổng. Chạy lệnh sau trong Terminal để xác nhận các payload mã độc đã bypass thành công hệ thống phòng ngự (hệ thống sẽ báo `F` - Fail cho từng lỗ hổng bị xuyên thủng).
+<img width="1414" height="931" alt="image" src="https://github.com/user-attachments/assets/ccf7b393-2c64-499a-906e-397874f56ce1" />
+<img width="1390" height="697" alt="image" src="https://github.com/user-attachments/assets/c36071be-a5ef-4dff-8d22-c87d74459b79" />
+
+
 
 
 
