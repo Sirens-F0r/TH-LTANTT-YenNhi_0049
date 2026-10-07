@@ -359,6 +359,303 @@ if not basic_constraints.value.ca:
 Trước khi duyệt qua danh sách chứng chỉ bị thu hồi, phải lấy public key của CA để `.verify()` chữ ký của file CRL.
 <img width="888" height="295" alt="image" src="https://github.com/user-attachments/assets/e7a3b850-29bf-4c9b-b01c-5f712bf467d9" />
 
+#Lab03
+# NetRecon - Network Reconnaissance Toolkit
 
+## Mô tả
+**NetRecon** là bộ công cụ trinh sát mạng (network reconnaissance) tích hợp nhiều chức năng quét và phân tích mạng. Hỗ trợ cả giao diện dòng lệnh (CLI) và giao diện web (Flask).
+
+## Cấu trúc thư mục
+
+```
+netrecon/
+├── modules/                     # Các module chức năng
+│   ├── __init__.py
+│   ├── port_scanner.py          # Quét cổng (async)
+│   ├── service_detector.py      # Nhận diện dịch vụ (nmap)
+│   ├── banner_grabber.py        # Thu thập banner
+│   ├── network_mapper.py        # Bản đồ mạng (ARP)
+│   ├── vuln_checker.py          # Kiểm tra lỗ hổng CVE
+│   ├── filter_utils.py          # Lọc IP (whitelist/blacklist)
+│   └── email_sender.py          # Gửi kết quả qua email
+├── templates/                   # Giao diện web (Jinja2)
+│   ├── layout.html              # Template chính
+│   ├── index.html               # Trang chủ (form nhập)
+│   └── result.html              # Trang kết quả
+├── static/
+│   └── style.css                # CSS giao diện
+├── app.py                       # Flask web server
+├── cli.py                       # Giao diện dòng lệnh (Click)
+├── requirements.txt             # Danh sách thư viện
+├── .env                         # Cấu hình SMTP (không push lên Git)
+└── .gitignore                   # File bỏ qua khi push Git
+```
+
+## Công nghệ sử dụng
+
+| Công nghệ | Mục đích |
+|-----------|----------|
+| **Python 3** | Ngôn ngữ lập trình chính |
+| **Flask** | Web framework cho giao diện web |
+| **Click** | Framework xây dựng CLI |
+| **asyncio** | Quét cổng bất đồng bộ (async) |
+| **Nmap** | Nhận diện dịch vụ mạng |
+| **HTMX** | Cập nhật kết quả động trên web |
+| **python-dotenv** | Quản lý biến môi trường (.env) |
+| **smtplib** | Gửi email kết quả qua Gmail SMTP |
+
+## Cách cài đặt & chạy
+
+### 1. Cài đặt thư viện
+```bash
+pip install -r requirements.txt
+```
+
+### 2. Cấu hình email
+Tạo file `.env` trong thư mục `netrecon/`:
+```
+SMTP_USER=your_email@gmail.com
+SMTP_PASS=your_app_password
+```
+> **Lưu ý**: Sử dụng **App Password** của Google, không phải mật khẩu tài khoản thông thường.
+
+### 3. Chạy bằng CLI
+```bash
+python cli.py --target 127.0.0.1 --ports 22,80,443 --mode all
+```
+
+**Các tùy chọn CLI:**
+
+| Tham số | Mô tả | Mặc định |
+|---------|--------|----------|
+| `--target` | Địa chỉ IP mục tiêu | *(bắt buộc)* |
+| `--ports` | Danh sách cổng (phân cách bằng dấu phẩy) | `22,80,443` |
+| `--rate-limit` | Số lượng quét đồng thời tối đa | `100` |
+| `--mode` | Chế độ quét | `all` |
+
+**Các chế độ quét (mode):**
+- `scan` - Quét cổng mở
+- `service` - Nhận diện dịch vụ
+- `banner` - Thu thập banner
+- `map` - Bản đồ mạng
+- `vuln` - Kiểm tra lỗ hổng
+- `all` - Tất cả các chế độ
+
+### 4. Chạy bằng Web
+```bash
+python app.py
+```
+Mở trình duyệt truy cập: `http://127.0.0.1:5000/`
+
+## Mô tả các module
+
+### `port_scanner.py`
+- Sử dụng **asyncio** để quét cổng bất đồng bộ
+- Hỗ trợ **rate limiting** với `asyncio.Semaphore` để giới hạn số kết nối đồng thời
+- Ghi log kết quả vào file `netrecon.log`
+
+### `service_detector.py`
+- Sử dụng **Nmap** (`nmap -sV`) để nhận diện dịch vụ đang chạy trên các cổng mở
+- Trả về tên dịch vụ, phiên bản phần mềm
+
+### `banner_grabber.py`
+- Kết nối trực tiếp đến cổng và đọc banner response
+- Timeout 2 giây để tránh treo kết nối
+- Ghi log banner thu thập được
+
+### `network_mapper.py`
+- Sử dụng lệnh `arp -a` để liệt kê các thiết bị trong mạng LAN
+- Hiển thị IP, MAC address và loại kết nối
+
+### `vuln_checker.py`
+- Kiểm tra các cổng mở dựa trên danh sách CVE đã biết:
+  - Port 21 (FTP): CVE-2015-3306, CVE-2001-0261
+  - Port 22 (SSH): CVE-2018-15473
+  - Port 23 (Telnet): CVE-2011-4862
+  - Port 80 (HTTP): CVE-2021-41773
+  - Port 443 (HTTPS): CVE-2021-3449
+
+### `filter_utils.py`
+- Lọc danh sách IP theo **whitelist** (chỉ cho phép) hoặc **blacklist** (loại trừ)
+
+### `email_sender.py`
+- Gửi kết quả quét qua email sử dụng Gmail SMTP (TLS, port 587)
+- Đọc thông tin đăng nhập từ file `.env`
+
+### `app.py` (Web Interface)
+- Trang chủ (`/`): Form nhập thông tin quét
+- Trang kết quả (`/scan`): Hiển thị kết quả và gửi email
+
+### `cli.py` (Command Line Interface)
+- Sử dụng thư viện **Click** để tạo giao diện dòng lệnh chuyên nghiệp
+- Hỗ trợ tất cả các chế độ quét
+
+## Kết quả mẫu
+
+### CLI Output
+```
+$ python cli.py --target 127.0.0.1
+
+Starting Nmap 7.991 ( https://nmap.org )
+Nmap scan report for localhost (127.0.0.1)
+Host is up (0.00s latency).
+
+PORT     STATE  SERVICE VERSION
+22/tcp   closed ssh
+80/tcp   closed http
+443/tcp  closed https
+
+{22: 'SSH - CVE-2018-15473', 80: 'HTTP - CVE-2021-41773', 443: 'HTTPS - CVE-2021-3449'}
+```
+
+### Web Interface
+Giao diện web cho phép:
+- Nhập IP mục tiêu và danh sách cổng
+- Chọn chế độ quét (All, Port Scan, Service Detection, Banner Grab, Network Map, Vulnerability Check)
+- Nhập email để nhận kết quả
+- Hiển thị kết quả trực tiếp trên trang web
+
+## Bảo mật
+
+- File `.env` chứa thông tin nhạy cảm được thêm vào `.gitignore`
+- Không push chứng chỉ (`certs/`, `*.pem`) lên Git
+- Sử dụng App Password thay vì mật khẩu tài khoản Google
+<img width="501" height="154" alt="Screenshot 2026-10-07 135216" src="https://github.com/user-attachments/assets/33efa8aa-0a82-4fb9-8de3-941ff7c9281f" />
+<img width="511" height="149" alt="Screenshot 2026-10-07 135205" src="https://github.com/user-attachments/assets/4a980f53-a714-45bf-8247-b77812fb3e3b" />
+
+# Secure Chat - Ứng dụng Chat Bảo Mật
+
+## Mô tả
+Ứng dụng chat client-server sử dụng **TLS/SSL** để mã hóa kênh truyền và **AES-256-CBC** để mã hóa nội dung tin nhắn. Hệ thống yêu cầu chứng chỉ số (X.509) cho cả server và client (mutual TLS authentication).
+
+## Cấu trúc thư mục
+
+```
+secure-chat/
+├── certs/                    # Thư mục chứa chứng chỉ số
+│   ├── ca/                   # Certificate Authority
+│   │   ├── ca.key            # Private key CA
+│   │   └── ca.crt            # Certificate CA
+│   ├── server/               # Chứng chỉ Server
+│   │   ├── server.key
+│   │   ├── server.csr
+│   │   └── server.crt
+│   └── client/               # Chứng chỉ Client
+│       ├── client.key
+│       ├── client.csr
+│       └── client.crt
+├── openssl.cnf               # Cấu hình OpenSSL cho CA
+├── make-certs.bat            # Script tự động tạo chứng chỉ
+├── message_encryption.py     # Module mã hóa/giải mã AES-256-CBC
+├── connection_manager.py     # Quản lý kết nối client
+├── room_manager.py           # Quản lý phòng chat
+├── server.py                 # Server TLS
+└── client.py                 # Client TLS
+```
+
+## Công nghệ sử dụng
+
+| Công nghệ | Mục đích |
+|-----------|----------|
+| **Python 3** | Ngôn ngữ lập trình chính |
+| **TLS 1.2+** | Mã hóa kênh truyền (transport layer) |
+| **AES-256-CBC** | Mã hóa nội dung tin nhắn (application layer) |
+| **X.509 Certificates** | Xác thực danh tính server và client |
+| **OpenSSL** | Tạo và quản lý chứng chỉ số |
+| **cryptography** | Thư viện mã hóa Python |
+
+## Cách cài đặt & chạy
+
+### 1. Cài đặt thư viện
+```bash
+pip install cryptography
+```
+
+### 2. Tạo chứng chỉ số
+Chạy script `make-certs.bat` để tự động sinh chứng chỉ CA, Server và Client:
+```bash
+.\make-certs.bat
+```
+
+### 3. Chạy Server
+```bash
+python server.py
+```
+Server sẽ lắng nghe trên `127.0.0.1:8443`.
+
+### 4. Chạy Client
+Mở terminal mới và chạy:
+```bash
+python client.py
+```
+Nhập username và bắt đầu chat.
+
+## Mô tả các module
+
+### `openssl.cnf`
+File cấu hình OpenSSL để tạo chứng chỉ CA (Certificate Authority) với các thông tin:
+- **Country**: VN
+- **State/Locality**: HN
+- **Organization**: MyOrg
+- **Common Name**: MyRootCA
+
+### `make-certs.bat`
+Script tự động hóa việc tạo chứng chỉ số:
+- Tạo CA root certificate (tự ký, hạn 10 năm)
+- Tạo Server certificate (ký bởi CA, hạn 1 năm)
+- Tạo Client certificate (ký bởi CA, hạn 1 năm)
+
+### `message_encryption.py`
+Class `MessageEncryption` cung cấp:
+- **encrypt(plaintext)**: Mã hóa tin nhắn bằng AES-256-CBC với IV ngẫu nhiên và PKCS7 padding
+- **decrypt(ciphertext)**: Giải mã tin nhắn
+
+### `connection_manager.py`
+Class `ConnectionManager` quản lý danh sách client đang kết nối:
+- Lưu trữ socket, username và encryption key của mỗi client
+- Thread-safe với threading.Lock()
+
+### `room_manager.py`
+Class `RoomManager` quản lý các phòng chat:
+- Tạo/tham gia/rời phòng
+- Broadcast tin nhắn trong phòng
+
+### `server.py`
+- Tạo SSL context yêu cầu chứng chỉ client (mutual TLS)
+- Chỉ chấp nhận TLS 1.2 trở lên
+- Nhận AES key từ client, mã hóa lại tin nhắn theo key riêng của từng client trước khi gửi
+
+### `client.py`
+- Kết nối TLS đến server với chứng chỉ client
+- Tạo AES-256 key ngẫu nhiên và gửi cho server
+- Gửi/nhận tin nhắn được mã hóa AES
+
+## Luồng hoạt động
+
+```
+Client A                    Server                     Client B
+   |                          |                          |
+   |--- TLS Handshake ------->|                          |
+   |    (mutual auth)         |                          |
+   |                          |<--- TLS Handshake -------|
+   |                          |     (mutual auth)        |
+   |--- username:AES_key ---->|                          |
+   |                          |<--- username:AES_key ----|
+   |                          |                          |
+   |--- AES_encrypt(msg) ---->|                          |
+   |                          |--- AES_encrypt(msg) ---->|
+   |                          |    (re-encrypted with    |
+   |                          |     Client B's key)      |
+```
+
+## Bảo mật
+
+- **Transport Layer**: TLS 1.2+ với mutual authentication
+- **Application Layer**: AES-256-CBC encryption
+- **Key Exchange**: Mỗi client có AES key riêng, server re-encrypt tin nhắn theo key của người nhận
+- **Certificate Validation**: Cả server và client đều phải có chứng chỉ hợp lệ do CA cấp
+<img width="386" height="334" alt="Screenshot 2026-10-07 152352" src="https://github.com/user-attachments/assets/01ea0ffd-fa3e-436e-9d9b-5daf1f5bcbc6" />
+<img width="509" height="109" alt="Screenshot 2026-10-07 152413" src="https://github.com/user-attachments/assets/f1028fec-fb2a-4fb7-b6e0-c5750d804cfb" />
+<img width="432" height="471" alt="Screenshot 2026-10-07 152513" src="https://github.com/user-attachments/assets/9a60eaaa-0d0e-4765-b0be-c0c03112936d" />
 
 
