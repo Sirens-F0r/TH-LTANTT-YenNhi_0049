@@ -1,0 +1,956 @@
+INFO:root:[2026-10-07 14:39:18] Running service detection on 127.0.0.1 --mode scan:22,80,443
+INFO:root:[2026-10-07 14:39:25] Starting Nmap 7.991 ( https://nmap.org ) at 2026-10-07 14:39 +0700
+Nmap done: 0 IP addresses (0 hosts up) scanned in 6.93 seconds
+
+INFO:root:[2026-10-07 14:39:25] Mapping network...
+INFO:root:[2026-10-07 14:39:25] 
+Interface: 10.228.79.130 --- 0xb
+  Internet Address      Physical Address      Type
+  10.228.79.229         42-eb-27-2a-e2-30     dynamic   
+  10.228.79.255         ff-ff-ff-ff-ff-ff     static    
+  224.0.0.22            01-00-5e-00-00-16     static    
+  224.0.0.251           01-00-5e-00-00-fb     static    
+  224.0.0.252           01-00-5e-00-00-fc     static    
+  239.255.255.250       01-00-5e-7f-ff-fa     static    
+  255.255.255.255       ff-ff-ff-ff-ff-ff     static    
+
+Interface: 192.168.11.1 --- 0x10
+  Internet Address      Physical Address      Type
+  192.168.11.254        00-50-56-f2-2a-23     dynamic   
+  192.168.11.255        ff-ff-ff-ff-ff-ff     static    
+  224.0.0.22            01-00-5e-00-00-16     static    
+  224.0.0.251           01-00-5e-00-00-fb     static    
+  224.0.0.252           01-00-5e-00-00-fc     static    
+  239.255.255.250       01-00-5e-7f-ff-fa     static    
+  255.255.255.255       ff-ff-ff-ff-ff-ff     static    
+
+Interface: 192.168.35.1 --- 0x11
+  Internet Address      Physical Address      Type
+  192.168.35.254        00-50-56-e4-a0-7a     dynamic   
+  192.168.35.255        ff-ff-ff-ff-ff-ff     static    
+  224.0.0.22            01-00-5e-00-00-16     static    
+  224.0.0.251           01-00-5e-00-00-fb     static    
+  224.0.0.252           01-00-5e-00-00-fc     static    
+  239.255.255.250       01-00-5e-7f-ff-fa     static    
+  255.255.255.255       ff-ff-ff-ff-ff-ff     static    
+
+INFO:root:[2026-10-07 14:41:26] Running service detection on 127.0.0.1:22,80,443
+INFO:root:[2026-10-07 14:41:27] Starting Nmap 7.991 ( https://nmap.org ) at 2026-10-07 14:41 +0700
+Nmap scan report for localhost (127.0.0.1)
+Host is up (0.00s latency).
+
+PORT    STATE  SERVICE VERSION
+22/tcp  closed ssh
+80/tcp  closed http
+443/tcp closed https
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 1 IP address (1 host up) scanned in 0.54 seconds
+
+INFO:root:[2026-10-07 14:41:33] Mapping network...
+INFO:root:[2026-10-07 14:41:33] 
+Interface: 10.228.79.130 --- 0xb
+  Internet Address      Physical Address      Type
+  10.228.79.229         42-eb-27-2a-e2-30     dynamic   
+  10.228.79.255         ff-ff-ff-ff-ff-ff     static    
+  224.0.0.22            01-00-5e-00-00-16     static    
+  224.0.0.251           01-00-5e-00-00-fb     static    
+  224.0.0.252           01-00-5e-00-00-fc     static    
+  239.255.255.250       01-00-5e-7f-ff-fa     static    
+  255.255.255.255       ff-ff-ff-ff-ff-ff     static    
+
+Interface: 192.168.11.1 --- 0x10
+  Internet Address      Physical Address      Type
+  192.168.11.254        00-50-56-f2-2a-23     dynamic   
+  192.168.11.255        ff-ff-ff-ff-ff-ff     static    
+  224.0.0.22            01-00-5e-00-00-16     static    
+  224.0.0.251           01-00-5e-00-00-fb     static    
+  224.0.0.252           01-00-5e-00-00-fc     static    
+  239.255.255.250       01-00-5e-7f-ff-fa     static    
+  255.255.255.255       ff-ff-ff-ff-ff-ff     static    
+
+Interface: 192.168.35.1 --- 0x11
+  Internet Address      Physical Address      Type
+  192.168.35.254        00-50-56-e4-a0-7a     dynamic   
+  192.168.35.255        ff-ff-ff-ff-ff-ff     static    
+  224.0.0.22            01-00-5e-00-00-16     static    
+  224.0.0.251           01-00-5e-00-00-fb     static    
+  224.0.0.252           01-00-5e-00-00-fc     static    
+  239.255.255.250       01-00-5e-7f-ff-fa     static    
+  255.255.255.255       ff-ff-ff-ff-ff-ff     static    
+
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.228.79.130:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 967-685-086
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.228.79.130:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 967-685-086
+INFO:werkzeug:127.0.0.1 - - [07/Oct/2026 14:51:05] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [07/Oct/2026 14:51:05] "GET /static/style.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [07/Oct/2026 14:51:06] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+INFO:root:[2026-10-07 14:52:10] Running service detection on 127.0.0.1:22,80,443
+INFO:root:[2026-10-07 14:52:11] Starting Nmap 7.991 ( https://nmap.org ) at 2026-10-07 14:52 +0700
+Nmap scan report for localhost (127.0.0.1)
+Host is up (0.0010s latency).
+
+PORT    STATE  SERVICE VERSION
+22/tcp  closed ssh
+80/tcp  closed http
+443/tcp closed https
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 1 IP address (1 host up) scanned in 0.43 seconds
+
+INFO:root:[2026-10-07 14:52:17] Mapping network...
+INFO:root:[2026-10-07 14:52:17] 
+Interface: 10.228.79.130 --- 0xb
+  Internet Address      Physical Address      Type
+  10.228.79.229         42-eb-27-2a-e2-30     dynamic   
+  10.228.79.255         ff-ff-ff-ff-ff-ff     static    
+  224.0.0.22            01-00-5e-00-00-16     static    
+  224.0.0.251           01-00-5e-00-00-fb     static    
+  224.0.0.252           01-00-5e-00-00-fc     static    
+  239.255.255.250       01-00-5e-7f-ff-fa     static    
+  255.255.255.255       ff-ff-ff-ff-ff-ff     static    
+
+Interface: 192.168.11.1 --- 0x10
+  Internet Address      Physical Address      Type
+  192.168.11.254        00-50-56-f2-2a-23     dynamic   
+  192.168.11.255        ff-ff-ff-ff-ff-ff     static    
+  224.0.0.22            01-00-5e-00-00-16     static    
+  224.0.0.251           01-00-5e-00-00-fb     static    
+  224.0.0.252           01-00-5e-00-00-fc     static    
+  239.255.255.250       01-00-5e-7f-ff-fa     static    
+  255.255.255.255       ff-ff-ff-ff-ff-ff     static    
+
+Interface: 192.168.35.1 --- 0x11
+  Internet Address      Physical Address      Type
+  192.168.35.254        00-50-56-e4-a0-7a     dynamic   
+  192.168.35.255        ff-ff-ff-ff-ff-ff     static    
+  224.0.0.22            01-00-5e-00-00-16     static    
+  224.0.0.251           01-00-5e-00-00-fb     static    
+  224.0.0.252           01-00-5e-00-00-fc     static    
+  239.255.255.250       01-00-5e-7f-ff-fa     static    
+  255.255.255.255       ff-ff-ff-ff-ff-ff     static    
+
+INFO:werkzeug:127.0.0.1 - - [07/Oct/2026 14:52:19] "POST /scan HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in 'M:\\LTANTT\\Lab03\\netrecon\\app.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 967-685-086
+INFO:root:[2026-10-07 14:57:20] Running service detection on 127.0.0.1:22,80,443
+INFO:root:[2026-10-07 14:57:21] Starting Nmap 7.991 ( https://nmap.org ) at 2026-10-07 14:57 +0700
+Nmap scan report for localhost (127.0.0.1)
+Host is up (0.00s latency).
+
+PORT    STATE  SERVICE VERSION
+22/tcp  closed ssh
+80/tcp  closed http
+443/tcp closed https
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 1 IP address (1 host up) scanned in 0.45 seconds
+
+INFO:root:[2026-10-07 14:57:27] Mapping network...
+INFO:root:[2026-10-07 14:57:27] 
+Interface: 10.228.79.130 --- 0xb
+  Internet Address      Physical Address      Type
+  10.228.79.229         42-eb-27-2a-e2-30     dynamic   
+  10.228.79.255         ff-ff-ff-ff-ff-ff     static    
+  224.0.0.22            01-00-5e-00-00-16     static    
+  224.0.0.251           01-00-5e-00-00-fb     static    
+  224.0.0.252           01-00-5e-00-00-fc     static    
+  239.255.255.250       01-00-5e-7f-ff-fa     static    
+  255.255.255.255       ff-ff-ff-ff-ff-ff     static    
+
+Interface: 192.168.11.1 --- 0x10
+  Internet Address      Physical Address      Type
+  192.168.11.254        00-50-56-f2-2a-23     dynamic   
+  192.168.11.255        ff-ff-ff-ff-ff-ff     static    
+  224.0.0.22            01-00-5e-00-00-16     static    
+  224.0.0.251           01-00-5e-00-00-fb     static    
+  224.0.0.252           01-00-5e-00-00-fc     static    
+  239.255.255.250       01-00-5e-7f-ff-fa     static    
+  255.255.255.255       ff-ff-ff-ff-ff-ff     static    
+
+Interface: 192.168.35.1 --- 0x11
+  Internet Address      Physical Address      Type
+  192.168.35.254        00-50-56-e4-a0-7a     dynamic   
+  192.168.35.255        ff-ff-ff-ff-ff-ff     static    
+  224.0.0.22            01-00-5e-00-00-16     static    
+  224.0.0.251           01-00-5e-00-00-fb     static    
+  224.0.0.252           01-00-5e-00-00-fc     static    
+  239.255.255.250       01-00-5e-7f-ff-fa     static    
+  255.255.255.255       ff-ff-ff-ff-ff-ff     static    
+
+INFO:werkzeug:127.0.0.1 - - [07/Oct/2026 14:57:29] "POST /scan HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in 'M:\\LTANTT\\Lab03\\netrecon\\app.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 967-685-086
+INFO:root:[2026-10-07 14:58:07] Running service detection on 127.0.0.1:22,80,443
+INFO:root:[2026-10-07 14:58:08] Starting Nmap 7.991 ( https://nmap.org ) at 2026-10-07 14:58 +0700
+Nmap scan report for localhost (127.0.0.1)
+Host is up (0.00s latency).
+
+PORT    STATE  SERVICE VERSION
+22/tcp  closed ssh
+80/tcp  closed http
+443/tcp closed https
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 1 IP address (1 host up) scanned in 0.52 seconds
+
+INFO:root:[2026-10-07 14:58:08] Running service detection on 127.0.0.1:22,80,443
+INFO:root:[2026-10-07 14:58:09] Starting Nmap 7.991 ( https://nmap.org ) at 2026-10-07 14:58 +0700
+Nmap scan report for localhost (127.0.0.1)
+Host is up (0.00s latency).
+
+PORT    STATE  SERVICE VERSION
+22/tcp  closed ssh
+80/tcp  closed http
+443/tcp closed https
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 1 IP address (1 host up) scanned in 0.47 seconds
+
+INFO:root:[2026-10-07 14:58:14] Mapping network...
+INFO:root:[2026-10-07 14:58:14] 
+Interface: 10.228.79.130 --- 0xb
+  Internet Address      Physical Address      Type
+  10.228.79.229         42-eb-27-2a-e2-30     dynamic   
+  10.228.79.255         ff-ff-ff-ff-ff-ff     static    
+  224.0.0.22            01-00-5e-00-00-16     static    
+  224.0.0.251           01-00-5e-00-00-fb     static    
+  224.0.0.252           01-00-5e-00-00-fc     static    
+  239.255.255.250       01-00-5e-7f-ff-fa     static    
+  255.255.255.255       ff-ff-ff-ff-ff-ff     static    
+
+Interface: 192.168.11.1 --- 0x10
+  Internet Address      Physical Address      Type
+  192.168.11.254        00-50-56-f2-2a-23     dynamic   
+  192.168.11.255        ff-ff-ff-ff-ff-ff     static    
+  224.0.0.22            01-00-5e-00-00-16     static    
+  224.0.0.251           01-00-5e-00-00-fb     static    
+  224.0.0.252           01-00-5e-00-00-fc     static    
+  239.255.255.250       01-00-5e-7f-ff-fa     static    
+  255.255.255.255       ff-ff-ff-ff-ff-ff     static    
+
+Interface: 192.168.35.1 --- 0x11
+  Internet Address      Physical Address      Type
+  192.168.35.254        00-50-56-e4-a0-7a     dynamic   
+  192.168.35.255        ff-ff-ff-ff-ff-ff     static    
+  224.0.0.22            01-00-5e-00-00-16     static    
+  224.0.0.251           01-00-5e-00-00-fb     static    
+  224.0.0.252           01-00-5e-00-00-fc     static    
+  239.255.255.250       01-00-5e-7f-ff-fa     static    
+  255.255.255.255       ff-ff-ff-ff-ff-ff     static    
+
+INFO:root:[2026-10-07 14:58:15] Mapping network...
+INFO:root:[2026-10-07 14:58:15] 
+Interface: 10.228.79.130 --- 0xb
+  Internet Address      Physical Address      Type
+  10.228.79.229         42-eb-27-2a-e2-30     dynamic   
+  10.228.79.255         ff-ff-ff-ff-ff-ff     static    
+  224.0.0.22            01-00-5e-00-00-16     static    
+  224.0.0.251           01-00-5e-00-00-fb     static    
+  224.0.0.252           01-00-5e-00-00-fc     static    
+  239.255.255.250       01-00-5e-7f-ff-fa     static    
+  255.255.255.255       ff-ff-ff-ff-ff-ff     static    
+
+Interface: 192.168.11.1 --- 0x10
+  Internet Address      Physical Address      Type
+  192.168.11.254        00-50-56-f2-2a-23     dynamic   
+  192.168.11.255        ff-ff-ff-ff-ff-ff     static    
+  224.0.0.22            01-00-5e-00-00-16     static    
+  224.0.0.251           01-00-5e-00-00-fb     static    
+  224.0.0.252           01-00-5e-00-00-fc     static    
+  239.255.255.250       01-00-5e-7f-ff-fa     static    
+  255.255.255.255       ff-ff-ff-ff-ff-ff     static    
+
+Interface: 192.168.35.1 --- 0x11
+  Internet Address      Physical Address      Type
+  192.168.35.254        00-50-56-e4-a0-7a     dynamic   
+  192.168.35.255        ff-ff-ff-ff-ff-ff     static    
+  224.0.0.22            01-00-5e-00-00-16     static    
+  224.0.0.251           01-00-5e-00-00-fb     static    
+  224.0.0.252           01-00-5e-00-00-fc     static    
+  239.255.255.250       01-00-5e-7f-ff-fa     static    
+  255.255.255.255       ff-ff-ff-ff-ff-ff     static    
+
+INFO:werkzeug:127.0.0.1 - - [07/Oct/2026 14:58:16] "POST /scan HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [07/Oct/2026 14:58:17] "POST /scan HTTP/1.1" 200 -
+INFO:root:[2026-10-07 14:59:15] Running service detection on 127.0.0.1:22,80,443
+INFO:root:[2026-10-07 14:59:16] Starting Nmap 7.991 ( https://nmap.org ) at 2026-10-07 14:59 +0700
+Nmap scan report for localhost (127.0.0.1)
+Host is up (0.00s latency).
+
+PORT    STATE  SERVICE VERSION
+22/tcp  closed ssh
+80/tcp  closed http
+443/tcp closed https
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 1 IP address (1 host up) scanned in 0.45 seconds
+
+INFO:root:[2026-10-07 14:59:22] Mapping network...
+INFO:root:[2026-10-07 14:59:22] 
+Interface: 10.228.79.130 --- 0xb
+  Internet Address      Physical Address      Type
+  10.228.79.229         42-eb-27-2a-e2-30     dynamic   
+  10.228.79.255         ff-ff-ff-ff-ff-ff     static    
+  224.0.0.22            01-00-5e-00-00-16     static    
+  224.0.0.251           01-00-5e-00-00-fb     static    
+  224.0.0.252           01-00-5e-00-00-fc     static    
+  239.255.255.250       01-00-5e-7f-ff-fa     static    
+  255.255.255.255       ff-ff-ff-ff-ff-ff     static    
+
+Interface: 192.168.11.1 --- 0x10
+  Internet Address      Physical Address      Type
+  192.168.11.254        00-50-56-f2-2a-23     dynamic   
+  192.168.11.255        ff-ff-ff-ff-ff-ff     static    
+  224.0.0.22            01-00-5e-00-00-16     static    
+  224.0.0.251           01-00-5e-00-00-fb     static    
+  224.0.0.252           01-00-5e-00-00-fc     static    
+  239.255.255.250       01-00-5e-7f-ff-fa     static    
+  255.255.255.255       ff-ff-ff-ff-ff-ff     static    
+
+Interface: 192.168.35.1 --- 0x11
+  Internet Address      Physical Address      Type
+  192.168.35.254        00-50-56-e4-a0-7a     dynamic   
+  192.168.35.255        ff-ff-ff-ff-ff-ff     static    
+  224.0.0.22            01-00-5e-00-00-16     static    
+  224.0.0.251           01-00-5e-00-00-fb     static    
+  224.0.0.252           01-00-5e-00-00-fc     static    
+  239.255.255.250       01-00-5e-7f-ff-fa     static    
+  255.255.255.255       ff-ff-ff-ff-ff-ff     static    
+
+INFO:werkzeug:127.0.0.1 - - [07/Oct/2026 14:59:24] "POST /scan HTTP/1.1" 200 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.228.79.130:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 967-685-086
+INFO:root:[2026-10-07 14:59:43] Running service detection on 127.0.0.1:22,80,443
+INFO:root:[2026-10-07 14:59:44] Starting Nmap 7.991 ( https://nmap.org ) at 2026-10-07 14:59 +0700
+Nmap scan report for localhost (127.0.0.1)
+Host is up (0.0010s latency).
+
+PORT    STATE  SERVICE VERSION
+22/tcp  closed ssh
+80/tcp  closed http
+443/tcp closed https
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 1 IP address (1 host up) scanned in 0.43 seconds
+
+INFO:root:[2026-10-07 14:59:50] Mapping network...
+INFO:root:[2026-10-07 14:59:50] 
+Interface: 10.228.79.130 --- 0xb
+  Internet Address      Physical Address      Type
+  10.228.79.229         42-eb-27-2a-e2-30     dynamic   
+  10.228.79.255         ff-ff-ff-ff-ff-ff     static    
+  224.0.0.22            01-00-5e-00-00-16     static    
+  224.0.0.251           01-00-5e-00-00-fb     static    
+  224.0.0.252           01-00-5e-00-00-fc     static    
+  239.255.255.250       01-00-5e-7f-ff-fa     static    
+  255.255.255.255       ff-ff-ff-ff-ff-ff     static    
+
+Interface: 192.168.11.1 --- 0x10
+  Internet Address      Physical Address      Type
+  192.168.11.254        00-50-56-f2-2a-23     dynamic   
+  192.168.11.255        ff-ff-ff-ff-ff-ff     static    
+  224.0.0.22            01-00-5e-00-00-16     static    
+  224.0.0.251           01-00-5e-00-00-fb     static    
+  224.0.0.252           01-00-5e-00-00-fc     static    
+  239.255.255.250       01-00-5e-7f-ff-fa     static    
+  255.255.255.255       ff-ff-ff-ff-ff-ff     static    
+
+Interface: 192.168.35.1 --- 0x11
+  Internet Address      Physical Address      Type
+  192.168.35.254        00-50-56-e4-a0-7a     dynamic   
+  192.168.35.255        ff-ff-ff-ff-ff-ff     static    
+  224.0.0.22            01-00-5e-00-00-16     static    
+  224.0.0.251           01-00-5e-00-00-fb     static    
+  224.0.0.252           01-00-5e-00-00-fc     static    
+  239.255.255.250       01-00-5e-7f-ff-fa     static    
+  255.255.255.255       ff-ff-ff-ff-ff-ff     static    
+
+INFO:werkzeug:127.0.0.1 - - [07/Oct/2026 14:59:52] "POST /scan HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [07/Oct/2026 15:00:01] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [07/Oct/2026 15:00:01] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+INFO:root:[2026-10-07 15:00:23] Running service detection on 127.0.0.1:22,80,443
+INFO:root:[2026-10-07 15:00:23] Starting Nmap 7.991 ( https://nmap.org ) at 2026-10-07 15:00 +0700
+Nmap scan report for localhost (127.0.0.1)
+Host is up (0.00s latency).
+
+PORT    STATE  SERVICE VERSION
+22/tcp  closed ssh
+80/tcp  closed http
+443/tcp closed https
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 1 IP address (1 host up) scanned in 0.44 seconds
+
+INFO:root:[2026-10-07 15:00:29] Mapping network...
+INFO:root:[2026-10-07 15:00:29] 
+Interface: 10.228.79.130 --- 0xb
+  Internet Address      Physical Address      Type
+  10.228.79.229         42-eb-27-2a-e2-30     dynamic   
+  10.228.79.255         ff-ff-ff-ff-ff-ff     static    
+  224.0.0.22            01-00-5e-00-00-16     static    
+  224.0.0.251           01-00-5e-00-00-fb     static    
+  224.0.0.252           01-00-5e-00-00-fc     static    
+  239.255.255.250       01-00-5e-7f-ff-fa     static    
+  255.255.255.255       ff-ff-ff-ff-ff-ff     static    
+
+Interface: 192.168.11.1 --- 0x10
+  Internet Address      Physical Address      Type
+  192.168.11.254        00-50-56-f2-2a-23     dynamic   
+  192.168.11.255        ff-ff-ff-ff-ff-ff     static    
+  224.0.0.22            01-00-5e-00-00-16     static    
+  224.0.0.251           01-00-5e-00-00-fb     static    
+  224.0.0.252           01-00-5e-00-00-fc     static    
+  239.255.255.250       01-00-5e-7f-ff-fa     static    
+  255.255.255.255       ff-ff-ff-ff-ff-ff     static    
+
+Interface: 192.168.35.1 --- 0x11
+  Internet Address      Physical Address      Type
+  192.168.35.254        00-50-56-e4-a0-7a     dynamic   
+  192.168.35.255        ff-ff-ff-ff-ff-ff     static    
+  224.0.0.22            01-00-5e-00-00-16     static    
+  224.0.0.251           01-00-5e-00-00-fb     static    
+  224.0.0.252           01-00-5e-00-00-fc     static    
+  239.255.255.250       01-00-5e-7f-ff-fa     static    
+  255.255.255.255       ff-ff-ff-ff-ff-ff     static    
+
+INFO:werkzeug:127.0.0.1 - - [07/Oct/2026 15:00:31] "POST /scan HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in 'M:\\LTANTT\\Lab03\\netrecon\\modules\\email_sender.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 967-685-086
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.228.79.130:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 967-685-086
+INFO:root:[2026-10-07 15:03:00] Running service detection on 127.0.0.1:22,80,443
+INFO:root:[2026-10-07 15:03:02] Starting Nmap 7.991 ( https://nmap.org ) at 2026-10-07 15:03 +0700
+Nmap scan report for localhost (127.0.0.1)
+Host is up (0.00s latency).
+
+PORT    STATE  SERVICE VERSION
+22/tcp  closed ssh
+80/tcp  closed http
+443/tcp closed https
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 1 IP address (1 host up) scanned in 1.72 seconds
+
+INFO:root:[2026-10-07 15:03:08] Mapping network...
+INFO:root:[2026-10-07 15:03:08] 
+Interface: 10.228.79.130 --- 0xb
+  Internet Address      Physical Address      Type
+  10.228.79.229         42-eb-27-2a-e2-30     dynamic   
+  10.228.79.255         ff-ff-ff-ff-ff-ff     static    
+  224.0.0.22            01-00-5e-00-00-16     static    
+  224.0.0.251           01-00-5e-00-00-fb     static    
+  224.0.0.252           01-00-5e-00-00-fc     static    
+  239.255.255.250       01-00-5e-7f-ff-fa     static    
+  255.255.255.255       ff-ff-ff-ff-ff-ff     static    
+
+Interface: 192.168.11.1 --- 0x10
+  Internet Address      Physical Address      Type
+  192.168.11.254        00-50-56-f2-2a-23     dynamic   
+  192.168.11.255        ff-ff-ff-ff-ff-ff     static    
+  224.0.0.22            01-00-5e-00-00-16     static    
+  224.0.0.251           01-00-5e-00-00-fb     static    
+  224.0.0.252           01-00-5e-00-00-fc     static    
+  239.255.255.250       01-00-5e-7f-ff-fa     static    
+  255.255.255.255       ff-ff-ff-ff-ff-ff     static    
+
+Interface: 192.168.35.1 --- 0x11
+  Internet Address      Physical Address      Type
+  192.168.35.254        00-50-56-e4-a0-7a     dynamic   
+  192.168.35.255        ff-ff-ff-ff-ff-ff     static    
+  224.0.0.22            01-00-5e-00-00-16     static    
+  224.0.0.251           01-00-5e-00-00-fb     static    
+  224.0.0.252           01-00-5e-00-00-fc     static    
+  239.255.255.250       01-00-5e-7f-ff-fa     static    
+  255.255.255.255       ff-ff-ff-ff-ff-ff     static    
+
+INFO:werkzeug:127.0.0.1 - - [07/Oct/2026 15:03:11] "POST /scan HTTP/1.1" 200 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.228.79.130:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 967-685-086
+INFO:root:[2026-10-07 15:03:39] Running service detection on 127.0.0.1:22,80,443
+INFO:root:[2026-10-07 15:03:40] Starting Nmap 7.991 ( https://nmap.org ) at 2026-10-07 15:03 +0700
+Nmap scan report for localhost (127.0.0.1)
+Host is up (0.00s latency).
+
+PORT    STATE  SERVICE VERSION
+22/tcp  closed ssh
+80/tcp  closed http
+443/tcp closed https
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 1 IP address (1 host up) scanned in 0.34 seconds
+
+INFO:root:[2026-10-07 15:03:46] Mapping network...
+INFO:root:[2026-10-07 15:03:46] 
+Interface: 10.228.79.130 --- 0xb
+  Internet Address      Physical Address      Type
+  10.228.79.229         42-eb-27-2a-e2-30     dynamic   
+  10.228.79.255         ff-ff-ff-ff-ff-ff     static    
+  224.0.0.22            01-00-5e-00-00-16     static    
+  224.0.0.251           01-00-5e-00-00-fb     static    
+  224.0.0.252           01-00-5e-00-00-fc     static    
+  239.255.255.250       01-00-5e-7f-ff-fa     static    
+  255.255.255.255       ff-ff-ff-ff-ff-ff     static    
+
+Interface: 192.168.11.1 --- 0x10
+  Internet Address      Physical Address      Type
+  192.168.11.254        00-50-56-f2-2a-23     dynamic   
+  192.168.11.255        ff-ff-ff-ff-ff-ff     static    
+  224.0.0.22            01-00-5e-00-00-16     static    
+  224.0.0.251           01-00-5e-00-00-fb     static    
+  224.0.0.252           01-00-5e-00-00-fc     static    
+  239.255.255.250       01-00-5e-7f-ff-fa     static    
+  255.255.255.255       ff-ff-ff-ff-ff-ff     static    
+
+Interface: 192.168.35.1 --- 0x11
+  Internet Address      Physical Address      Type
+  192.168.35.254        00-50-56-e4-a0-7a     dynamic   
+  192.168.35.255        ff-ff-ff-ff-ff-ff     static    
+  224.0.0.22            01-00-5e-00-00-16     static    
+  224.0.0.251           01-00-5e-00-00-fb     static    
+  224.0.0.252           01-00-5e-00-00-fc     static    
+  239.255.255.250       01-00-5e-7f-ff-fa     static    
+  255.255.255.255       ff-ff-ff-ff-ff-ff     static    
+
+INFO:werkzeug:127.0.0.1 - - [07/Oct/2026 15:03:49] "POST /scan HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [07/Oct/2026 15:03:50] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [07/Oct/2026 15:03:50] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+INFO:root:[2026-10-07 15:04:11] Running service detection on 127.0.0.1:22,80,443
+INFO:root:[2026-10-07 15:04:12] Starting Nmap 7.991 ( https://nmap.org ) at 2026-10-07 15:04 +0700
+Nmap scan report for localhost (127.0.0.1)
+Host is up (0.00s latency).
+
+PORT    STATE  SERVICE VERSION
+22/tcp  closed ssh
+80/tcp  closed http
+443/tcp closed https
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 1 IP address (1 host up) scanned in 0.33 seconds
+
+INFO:root:[2026-10-07 15:04:18] Mapping network...
+INFO:root:[2026-10-07 15:04:18] 
+Interface: 10.228.79.130 --- 0xb
+  Internet Address      Physical Address      Type
+  10.228.79.229         42-eb-27-2a-e2-30     dynamic   
+  10.228.79.255         ff-ff-ff-ff-ff-ff     static    
+  224.0.0.22            01-00-5e-00-00-16     static    
+  224.0.0.251           01-00-5e-00-00-fb     static    
+  224.0.0.252           01-00-5e-00-00-fc     static    
+  239.255.255.250       01-00-5e-7f-ff-fa     static    
+  255.255.255.255       ff-ff-ff-ff-ff-ff     static    
+
+Interface: 192.168.11.1 --- 0x10
+  Internet Address      Physical Address      Type
+  192.168.11.254        00-50-56-f2-2a-23     dynamic   
+  192.168.11.255        ff-ff-ff-ff-ff-ff     static    
+  224.0.0.22            01-00-5e-00-00-16     static    
+  224.0.0.251           01-00-5e-00-00-fb     static    
+  224.0.0.252           01-00-5e-00-00-fc     static    
+  239.255.255.250       01-00-5e-7f-ff-fa     static    
+  255.255.255.255       ff-ff-ff-ff-ff-ff     static    
+
+Interface: 192.168.35.1 --- 0x11
+  Internet Address      Physical Address      Type
+  192.168.35.254        00-50-56-e4-a0-7a     dynamic   
+  192.168.35.255        ff-ff-ff-ff-ff-ff     static    
+  224.0.0.22            01-00-5e-00-00-16     static    
+  224.0.0.251           01-00-5e-00-00-fb     static    
+  224.0.0.252           01-00-5e-00-00-fc     static    
+  239.255.255.250       01-00-5e-7f-ff-fa     static    
+  255.255.255.255       ff-ff-ff-ff-ff-ff     static    
+
+INFO:werkzeug:127.0.0.1 - - [07/Oct/2026 15:04:20] "POST /scan HTTP/1.1" 200 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.228.79.130:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 967-685-086
+INFO:root:[2026-10-07 15:08:18] Running service detection on 127.0.0.1:22,80,443
+INFO:root:[2026-10-07 15:08:18] Starting Nmap 7.991 ( https://nmap.org ) at 2026-10-07 15:08 +0700
+Nmap scan report for localhost (127.0.0.1)
+Host is up (0.00s latency).
+
+PORT    STATE  SERVICE VERSION
+22/tcp  closed ssh
+80/tcp  closed http
+443/tcp closed https
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 1 IP address (1 host up) scanned in 0.31 seconds
+
+INFO:root:[2026-10-07 15:08:24] Mapping network...
+INFO:root:[2026-10-07 15:08:24] 
+Interface: 10.228.79.130 --- 0xb
+  Internet Address      Physical Address      Type
+  10.228.79.229         42-eb-27-2a-e2-30     dynamic   
+  10.228.79.255         ff-ff-ff-ff-ff-ff     static    
+  224.0.0.22            01-00-5e-00-00-16     static    
+  224.0.0.251           01-00-5e-00-00-fb     static    
+  224.0.0.252           01-00-5e-00-00-fc     static    
+  239.255.255.250       01-00-5e-7f-ff-fa     static    
+  255.255.255.255       ff-ff-ff-ff-ff-ff     static    
+
+Interface: 192.168.11.1 --- 0x10
+  Internet Address      Physical Address      Type
+  192.168.11.254        00-50-56-f2-2a-23     dynamic   
+  192.168.11.255        ff-ff-ff-ff-ff-ff     static    
+  224.0.0.22            01-00-5e-00-00-16     static    
+  224.0.0.251           01-00-5e-00-00-fb     static    
+  224.0.0.252           01-00-5e-00-00-fc     static    
+  239.255.255.250       01-00-5e-7f-ff-fa     static    
+  255.255.255.255       ff-ff-ff-ff-ff-ff     static    
+
+Interface: 192.168.35.1 --- 0x11
+  Internet Address      Physical Address      Type
+  192.168.35.254        00-50-56-e4-a0-7a     dynamic   
+  192.168.35.255        ff-ff-ff-ff-ff-ff     static    
+  224.0.0.22            01-00-5e-00-00-16     static    
+  224.0.0.251           01-00-5e-00-00-fb     static    
+  224.0.0.252           01-00-5e-00-00-fc     static    
+  239.255.255.250       01-00-5e-7f-ff-fa     static    
+  255.255.255.255       ff-ff-ff-ff-ff-ff     static    
+
+INFO:werkzeug:127.0.0.1 - - [07/Oct/2026 15:08:27] "POST /scan HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [07/Oct/2026 15:08:38] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [07/Oct/2026 15:08:38] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.228.79.130:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 967-685-086
+INFO:werkzeug:127.0.0.1 - - [07/Oct/2026 15:09:21] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [07/Oct/2026 15:09:21] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+INFO:root:[2026-10-07 15:09:43] Running service detection on 127.0.0.1:22,80,443
+INFO:werkzeug:127.0.0.1 - - [07/Oct/2026 15:09:43] "[35m[1mPOST /scan HTTP/1.1[0m" 500 -
+INFO:werkzeug:127.0.0.1 - - [07/Oct/2026 15:09:43] "GET /scan?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [07/Oct/2026 15:09:43] "GET /scan?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [07/Oct/2026 15:09:43] "GET /scan?__debugger__=yes&cmd=resource&f=console.png&s=sc0CU6zmRQIebnuCJ760 HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [07/Oct/2026 15:09:43] "GET /scan?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in 'M:\\LTANTT\\Lab03\\netrecon\\app.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 967-685-086
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.228.79.130:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 967-685-086
+INFO:root:[2026-10-07 15:11:08] Running service detection on 127.0.0.1:22,80,443
+INFO:root:[2026-10-07 15:11:08] Starting Nmap 7.991 ( https://nmap.org ) at 2026-10-07 15:11 +0700
+Nmap scan report for localhost (127.0.0.1)
+Host is up (0.0010s latency).
+
+PORT    STATE  SERVICE VERSION
+22/tcp  closed ssh
+80/tcp  closed http
+443/tcp closed https
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 1 IP address (1 host up) scanned in 0.30 seconds
+
+INFO:root:[2026-10-07 15:11:14] Mapping network...
+INFO:root:[2026-10-07 15:11:14] 
+Interface: 10.228.79.130 --- 0xb
+  Internet Address      Physical Address      Type
+  10.228.79.229         42-eb-27-2a-e2-30     dynamic   
+  10.228.79.255         ff-ff-ff-ff-ff-ff     static    
+  224.0.0.22            01-00-5e-00-00-16     static    
+  224.0.0.251           01-00-5e-00-00-fb     static    
+  224.0.0.252           01-00-5e-00-00-fc     static    
+  239.255.255.250       01-00-5e-7f-ff-fa     static    
+  255.255.255.255       ff-ff-ff-ff-ff-ff     static    
+
+Interface: 192.168.11.1 --- 0x10
+  Internet Address      Physical Address      Type
+  192.168.11.254        00-50-56-f2-2a-23     dynamic   
+  192.168.11.255        ff-ff-ff-ff-ff-ff     static    
+  224.0.0.22            01-00-5e-00-00-16     static    
+  224.0.0.251           01-00-5e-00-00-fb     static    
+  224.0.0.252           01-00-5e-00-00-fc     static    
+  239.255.255.250       01-00-5e-7f-ff-fa     static    
+  255.255.255.255       ff-ff-ff-ff-ff-ff     static    
+
+Interface: 192.168.35.1 --- 0x11
+  Internet Address      Physical Address      Type
+  192.168.35.254        00-50-56-e4-a0-7a     dynamic   
+  192.168.35.255        ff-ff-ff-ff-ff-ff     static    
+  224.0.0.22            01-00-5e-00-00-16     static    
+  224.0.0.251           01-00-5e-00-00-fb     static    
+  224.0.0.252           01-00-5e-00-00-fc     static    
+  239.255.255.250       01-00-5e-7f-ff-fa     static    
+  255.255.255.255       ff-ff-ff-ff-ff-ff     static    
+
+INFO:werkzeug:127.0.0.1 - - [07/Oct/2026 15:11:16] "POST /scan HTTP/1.1" 200 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.228.79.130:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 967-685-086
+INFO:werkzeug:127.0.0.1 - - [07/Oct/2026 15:14:14] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [07/Oct/2026 15:14:15] "GET /static/style.css HTTP/1.1" 200 -
+INFO:root:[2026-10-07 15:14:49] Running service detection on 127.0.0.1:22,80,443
+INFO:root:[2026-10-07 15:14:49] Starting Nmap 7.991 ( https://nmap.org ) at 2026-10-07 15:14 +0700
+Nmap scan report for localhost (127.0.0.1)
+Host is up (0.00s latency).
+
+PORT    STATE  SERVICE VERSION
+22/tcp  closed ssh
+80/tcp  closed http
+443/tcp closed https
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 1 IP address (1 host up) scanned in 0.30 seconds
+
+INFO:root:[2026-10-07 15:14:55] Mapping network...
+INFO:root:[2026-10-07 15:14:55] 
+Interface: 10.228.79.130 --- 0xb
+  Internet Address      Physical Address      Type
+  10.228.79.229         42-eb-27-2a-e2-30     dynamic   
+  10.228.79.255         ff-ff-ff-ff-ff-ff     static    
+  224.0.0.22            01-00-5e-00-00-16     static    
+  224.0.0.251           01-00-5e-00-00-fb     static    
+  224.0.0.252           01-00-5e-00-00-fc     static    
+  239.255.255.250       01-00-5e-7f-ff-fa     static    
+  255.255.255.255       ff-ff-ff-ff-ff-ff     static    
+
+Interface: 192.168.11.1 --- 0x10
+  Internet Address      Physical Address      Type
+  192.168.11.254        00-50-56-f2-2a-23     dynamic   
+  192.168.11.255        ff-ff-ff-ff-ff-ff     static    
+  224.0.0.22            01-00-5e-00-00-16     static    
+  224.0.0.251           01-00-5e-00-00-fb     static    
+  224.0.0.252           01-00-5e-00-00-fc     static    
+  239.255.255.250       01-00-5e-7f-ff-fa     static    
+  255.255.255.255       ff-ff-ff-ff-ff-ff     static    
+
+Interface: 192.168.35.1 --- 0x11
+  Internet Address      Physical Address      Type
+  192.168.35.254        00-50-56-e4-a0-7a     dynamic   
+  192.168.35.255        ff-ff-ff-ff-ff-ff     static    
+  224.0.0.22            01-00-5e-00-00-16     static    
+  224.0.0.251           01-00-5e-00-00-fb     static    
+  224.0.0.252           01-00-5e-00-00-fc     static    
+  239.255.255.250       01-00-5e-7f-ff-fa     static    
+  255.255.255.255       ff-ff-ff-ff-ff-ff     static    
+
+INFO:werkzeug:127.0.0.1 - - [07/Oct/2026 15:14:58] "POST /scan HTTP/1.1" 200 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.228.79.130:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 967-685-086
+INFO:werkzeug:127.0.0.1 - - [07/Oct/2026 15:17:05] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [07/Oct/2026 15:17:05] "[36mGET /static/style.css HTTP/1.1[0m" 304 -
+INFO:root:[2026-10-07 15:17:24] Running service detection on 127.0.0.1:22,80,443
+INFO:root:[2026-10-07 15:17:25] Starting Nmap 7.991 ( https://nmap.org ) at 2026-10-07 15:17 +0700
+Nmap scan report for localhost (127.0.0.1)
+Host is up (0.00088s latency).
+
+PORT    STATE  SERVICE VERSION
+22/tcp  closed ssh
+80/tcp  closed http
+443/tcp closed https
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 1 IP address (1 host up) scanned in 0.31 seconds
+
+INFO:root:[2026-10-07 15:17:31] Mapping network...
+INFO:root:[2026-10-07 15:17:31] 
+Interface: 10.228.79.130 --- 0xb
+  Internet Address      Physical Address      Type
+  10.228.79.229         42-eb-27-2a-e2-30     dynamic   
+  10.228.79.255         ff-ff-ff-ff-ff-ff     static    
+  224.0.0.22            01-00-5e-00-00-16     static    
+  224.0.0.251           01-00-5e-00-00-fb     static    
+  224.0.0.252           01-00-5e-00-00-fc     static    
+  239.255.255.250       01-00-5e-7f-ff-fa     static    
+  255.255.255.255       ff-ff-ff-ff-ff-ff     static    
+
+Interface: 192.168.11.1 --- 0x10
+  Internet Address      Physical Address      Type
+  192.168.11.254        00-50-56-f2-2a-23     dynamic   
+  192.168.11.255        ff-ff-ff-ff-ff-ff     static    
+  224.0.0.22            01-00-5e-00-00-16     static    
+  224.0.0.251           01-00-5e-00-00-fb     static    
+  224.0.0.252           01-00-5e-00-00-fc     static    
+  239.255.255.250       01-00-5e-7f-ff-fa     static    
+  255.255.255.255       ff-ff-ff-ff-ff-ff     static    
+
+Interface: 192.168.35.1 --- 0x11
+  Internet Address      Physical Address      Type
+  192.168.35.254        00-50-56-e4-a0-7a     dynamic   
+  192.168.35.255        ff-ff-ff-ff-ff-ff     static    
+  224.0.0.22            01-00-5e-00-00-16     static    
+  224.0.0.251           01-00-5e-00-00-fb     static    
+  224.0.0.252           01-00-5e-00-00-fc     static    
+  239.255.255.250       01-00-5e-7f-ff-fa     static    
+  255.255.255.255       ff-ff-ff-ff-ff-ff     static    
+
+INFO:werkzeug:127.0.0.1 - - [07/Oct/2026 15:17:34] "POST /scan HTTP/1.1" 200 -
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.228.79.130:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 967-685-086
+INFO:werkzeug:127.0.0.1 - - [07/Oct/2026 15:19:51] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [07/Oct/2026 15:19:52] "GET /static/style.css HTTP/1.1" 200 -
+INFO:root:[2026-10-07 15:20:13] Running service detection on 127.0.0.1:22,80,443
+INFO:root:[2026-10-07 15:20:13] Starting Nmap 7.991 ( https://nmap.org ) at 2026-10-07 15:20 +0700
+Nmap scan report for localhost (127.0.0.1)
+Host is up (0.00s latency).
+
+PORT    STATE  SERVICE VERSION
+22/tcp  closed ssh
+80/tcp  closed http
+443/tcp closed https
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 1 IP address (1 host up) scanned in 0.31 seconds
+
+INFO:root:[2026-10-07 15:20:19] Mapping network...
+INFO:root:[2026-10-07 15:20:19] 
+Interface: 10.228.79.130 --- 0xb
+  Internet Address      Physical Address      Type
+  10.228.79.229         42-eb-27-2a-e2-30     dynamic   
+  10.228.79.255         ff-ff-ff-ff-ff-ff     static    
+  224.0.0.22            01-00-5e-00-00-16     static    
+  224.0.0.251           01-00-5e-00-00-fb     static    
+  224.0.0.252           01-00-5e-00-00-fc     static    
+  239.255.255.250       01-00-5e-7f-ff-fa     static    
+  255.255.255.255       ff-ff-ff-ff-ff-ff     static    
+
+Interface: 192.168.11.1 --- 0x10
+  Internet Address      Physical Address      Type
+  192.168.11.254        00-50-56-f2-2a-23     dynamic   
+  192.168.11.255        ff-ff-ff-ff-ff-ff     static    
+  224.0.0.22            01-00-5e-00-00-16     static    
+  224.0.0.251           01-00-5e-00-00-fb     static    
+  224.0.0.252           01-00-5e-00-00-fc     static    
+  239.255.255.250       01-00-5e-7f-ff-fa     static    
+  255.255.255.255       ff-ff-ff-ff-ff-ff     static    
+
+Interface: 192.168.35.1 --- 0x11
+  Internet Address      Physical Address      Type
+  192.168.35.254        00-50-56-e4-a0-7a     dynamic   
+  192.168.35.255        ff-ff-ff-ff-ff-ff     static    
+  224.0.0.22            01-00-5e-00-00-16     static    
+  224.0.0.251           01-00-5e-00-00-fb     static    
+  224.0.0.252           01-00-5e-00-00-fc     static    
+  239.255.255.250       01-00-5e-7f-ff-fa     static    
+  255.255.255.255       ff-ff-ff-ff-ff-ff     static    
+
+INFO:werkzeug:127.0.0.1 - - [07/Oct/2026 15:20:22] "POST /scan HTTP/1.1" 200 -
+INFO:werkzeug: * Detected change in 'M:\\LTANTT\\Lab03\\netrecon\\app.py', reloading
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 967-685-086
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.228.79.130:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 967-685-086
+INFO:root:[2026-10-07 15:22:55] Running service detection on 127.0.0.1:22,80,443
+INFO:root:[2026-10-07 15:22:56] Starting Nmap 7.991 ( https://nmap.org ) at 2026-10-07 15:22 +0700
+Nmap scan report for localhost (127.0.0.1)
+Host is up (0.00s latency).
+
+PORT    STATE  SERVICE VERSION
+22/tcp  closed ssh
+80/tcp  closed http
+443/tcp closed https
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 1 IP address (1 host up) scanned in 0.32 seconds
+
+INFO:root:[2026-10-07 15:23:02] Mapping network...
+INFO:root:[2026-10-07 15:23:02] 
+Interface: 10.228.79.130 --- 0xb
+  Internet Address      Physical Address      Type
+  10.228.79.229         42-eb-27-2a-e2-30     dynamic   
+  10.228.79.255         ff-ff-ff-ff-ff-ff     static    
+  224.0.0.22            01-00-5e-00-00-16     static    
+  224.0.0.251           01-00-5e-00-00-fb     static    
+  224.0.0.252           01-00-5e-00-00-fc     static    
+  239.255.255.250       01-00-5e-7f-ff-fa     static    
+  255.255.255.255       ff-ff-ff-ff-ff-ff     static    
+
+Interface: 192.168.11.1 --- 0x10
+  Internet Address      Physical Address      Type
+  192.168.11.254        00-50-56-f2-2a-23     dynamic   
+  192.168.11.255        ff-ff-ff-ff-ff-ff     static    
+  224.0.0.22            01-00-5e-00-00-16     static    
+  224.0.0.251           01-00-5e-00-00-fb     static    
+  224.0.0.252           01-00-5e-00-00-fc     static    
+  239.255.255.250       01-00-5e-7f-ff-fa     static    
+  255.255.255.255       ff-ff-ff-ff-ff-ff     static    
+
+Interface: 192.168.35.1 --- 0x11
+  Internet Address      Physical Address      Type
+  192.168.35.254        00-50-56-e4-a0-7a     dynamic   
+  192.168.35.255        ff-ff-ff-ff-ff-ff     static    
+  224.0.0.22            01-00-5e-00-00-16     static    
+  224.0.0.251           01-00-5e-00-00-fb     static    
+  224.0.0.252           01-00-5e-00-00-fc     static    
+  239.255.255.250       01-00-5e-7f-ff-fa     static    
+  255.255.255.255       ff-ff-ff-ff-ff-ff     static    
+
+INFO:werkzeug:127.0.0.1 - - [07/Oct/2026 15:23:09] "POST /scan HTTP/1.1" 200 -
