@@ -658,4 +658,124 @@ Client A                    Server                     Client B
 <img width="509" height="109" alt="Screenshot 2026-10-07 152413" src="https://github.com/user-attachments/assets/f1028fec-fb2a-4fb7-b6e0-c5750d804cfb" />
 <img width="432" height="471" alt="Screenshot 2026-10-07 152513" src="https://github.com/user-attachments/assets/9a60eaaa-0d0e-4765-b0be-c0c03112936d" />
 
+#Lab04 - 01
+web-vuln-scanner là một công cụ quét lỗ hổng bảo mật được xây dựng bằng Python. Công cụ này cho phép phát hiện các lỗ hổng thường gặp như XSS, SQL Injection, CSRF và SSRF trên một URL hoặc nội dung HTML cho trước.
+
+Cấu Trúc Dự Án
+
+web-vuln-scanner/
+├── main.py
+├── requirements.txt
+├── report/
+│   ├── __init__.py
+│   └── report_generator.py
+├── scanners/
+│   ├── __init__.py
+│   ├── csrf_detector.py
+│   ├── sql_injection_tester.py
+│   ├── ssrf_tester.py
+│   └── xss_scanner.py
+├── tests/
+│   ├── __init__.py
+│   ├── test_csrf.py
+│   ├── test_report.py
+│   ├── test_sql_injection.py
+│   ├── test_ssrf.py
+│   └── test_xss.py
+└── ui/
+    ├── app.py
+    └── templates/
+        ├── index.html
+        └── result.html
+Các Thành Phần Chính
+Module	Mô tả
+scanners/xss_scanner.py	Phát hiện lỗ hổng Cross-Site Scripting (XSS) bằng cách gửi payload thử nghiệm
+scanners/sql_injection_tester.py	Kiểm tra các tham số URL có khả năng bị SQL Injection
+scanners/csrf_detector.py	Phân tích nội dung HTML để xác định sự hiện diện của CSRF token
+scanners/ssrf_tester.py	Phát hiện các tham số URL trỏ đến địa chỉ IP nội bộ (SSRF)
+report/report_generator.py	Tổng hợp kết quả quét thành báo cáo có cấu trúc
+ui/app.py	Giao diện web Flask để người dùng nhập URL và chọn công cụ kiểm thử
+Cài Đặt & Chạy
+bash
+
+# Cài đặt các thư viện cần thiết
+pip install -r requirements.txt
+# Chạy từ dòng lệnh
+python main.py
+# Chạy giao diện web
+python ui/app.py
+Chạy Unit Test
+bash
+
+python -m unittest discover tests
+Kết Quả Thực Nghiệm
+Sau khi chạy main.py với URL kiểm thử có chứa payload SSRF, chương trình phát hiện thành công lỗ hổng và xuất kết quả theo định dạng:
+
+
+=== Vulnerability Report ===
+Param: url, Desc: Potential SSRF to internal resource,
+    Risk: High
+<img width="850" height="190" alt="image" src="https://github.com/user-attachments/assets/e03fe275-f940-4346-a3c6-abdef06a846f" />
+<img width="837" height="739" alt="image" src="https://github.com/user-attachments/assets/fc04f693-c243-463c-895d-e2c475ece696" />
+
+#Lab04-02
+jwt-security-tools là bộ công cụ hỗ trợ kiểm thử bảo mật liên quan đến JSON Web Token. Dự án bao gồm các chức năng: xác thực token, tấn công brute-force wordlist, quản lý vòng đời token và mô phỏng OAuth 2.0 client.
+
+Cấu Trúc Dự Án
+
+jwt-security-tools/
+├── main.py
+├── pytest.ini
+├── requirements.txt
+├── api_gateway/
+│   ├── __init__.py
+│   └── gateway.py
+├── jwt_cracker/
+│   ├── __init__.py
+│   └── cracker.py
+├── jwt_validator/
+│   ├── __init__.py
+│   └── validator.py
+├── oauth_client/
+│   ├── __init__.py
+│   └── client.py
+├── token_manager/
+│   ├── __init__.py
+│   └── manager.py
+└── tests/
+    ├── __init__.py
+    ├── test_api_gateway.py
+    ├── test_cracker.py
+    ├── test_oauth_client.py
+    ├── test_token_manager.py
+    └── test_validator.py
+Các Thành Phần Chính
+Module	Mô tả
+api_gateway/gateway.py	API Gateway sử dụng Flask, bảo vệ route /protected bằng JWT Bearer Token
+jwt_cracker/cracker.py	Tấn công brute-force JWT secret key sử dụng wordlist và đa luồng (ThreadPoolExecutor)
+jwt_validator/validator.py	Xác thực JWT token, phân loại lỗi (hết hạn, sai chữ ký, không hợp lệ)
+oauth_client/client.py	Mô phỏng OAuth 2.0 Authorization Code Flow
+token_manager/manager.py	Tạo và làm mới Access Token / Refresh Token
+Cài Đặt & Chạy
+bash
+
+# Cài đặt các thư viện cần thiết
+pip install -r requirements.txt
+# Chạy chương trình chính
+python main.py
+Chạy Unit Test
+bash
+
+python -m pytest tests/
+Kết Quả Kiểm Thử
+Các test case bao gồm:
+
+test_api_gateway: Kiểm tra route /protected với token hợp lệ (200 OK) và token không hợp lệ (401 Unauthorized).
+test_cracker: Xác nhận khả năng brute-force thành công secret key "supersecret" từ wordlist.
+test_oauth_client: Kiểm tra URL authorization được tạo đúng định dạng.
+test_token_manager: Xác thực luồng tạo Access Token và làm mới bằng Refresh Token.
+test_validator: Kiểm tra xác thực token hợp lệ và token sai chữ ký.
+<img width="1087" height="468" alt="image" src="https://github.com/user-attachments/assets/79dcd369-7e6d-4f2c-8403-4aedd5fa9777" />
+<img width="1054" height="120" alt="image" src="https://github.com/user-attachments/assets/ca704765-939b-4eee-a528-3382afacb991" />
+
 
